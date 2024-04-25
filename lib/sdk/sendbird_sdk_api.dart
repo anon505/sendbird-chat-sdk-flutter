@@ -362,7 +362,7 @@ class SendbirdSdk {
 
       return PushTokenRegistrationStatus.success;
     } catch (exception) {
-      logger.e(StackTrace.current, "Failed to register push token");
+      logger.e("Failed to register push token");
       rethrow;
     }
   }

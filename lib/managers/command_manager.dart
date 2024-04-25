@@ -293,7 +293,7 @@ class CommandManager with SdkAccessor {
         // * If tokenAt is 0, then delete the token and update prefDeviceTokenLastDeletedAt
         if (deviceTokenUnixTimeAt == null ||
             deviceTokenUnixTimeAt < tokenLastDeletedUnixTime) {
-          logger.d(StackTrace.current, 'tokenAt NULL');
+          logger.d('tokenAt NULL');
           //* Delete token from shared preference
           await prefs.remove(prefDeviceToken);
           //* Update prefDeviceTokenLastDeletedAt
@@ -731,7 +731,7 @@ class CommandManager with SdkAccessor {
       } else {
         final error =
             SBError(message: "Pin Message Only Supports GroupChannel");
-        logger.e(StackTrace.current, error);
+        logger.e(error);
         throw (error);
       }
     } catch (e) {

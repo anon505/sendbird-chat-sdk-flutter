@@ -64,7 +64,7 @@ class FileMessageParams extends BaseMessageParams {
       if (fileExtensionType != null) {
         fileType = fileExtensionType;
       } else {
-        logger.e(StackTrace.current, "File Extension Type UNKNOWN");
+        logger.e( "File Extension Type UNKNOWN");
         throw Exception(
             "File Extension Type UNKNOWN. Please include `fileExtensionType`");
       }

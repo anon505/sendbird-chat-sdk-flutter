@@ -874,7 +874,7 @@ extension Messages on BaseChannel {
 
       return event;
     } catch (exception) {
-      logger.e(StackTrace.current, [exception]);
+      logger.e([exception]);
       if (onCompleted != null)
         onCompleted(
             null, SBError(message: "Failed sending Vote Poll Request."));
